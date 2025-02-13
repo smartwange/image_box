@@ -17,6 +17,17 @@ Add dependency in pubspec.yaml file as
 > images_box: 0.1.0
 
 ## Forward Geocoding 
-
+```dart
+# bgColor (Color) ： background color
+# imageIndex (int) ：Current image index value
+# imageList (List<String>) : List of online image addresses
+ImageBox(
+    bgColor: Colors.white,
+    imageIndex: e.key,
+    imageList: photoList,
+    )
+```
+## Preview
+![pre.jpg](https://raw.githubusercontent.com/smartwange/image_box/refs/heads/main/example/assets/images/female_active.png)
 
 
