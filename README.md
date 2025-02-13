@@ -2,15 +2,21 @@
 
 Flutter Image Popup with Multiple Features
 
-## Getting Started
+## Features 
+1. Image Popup Dialog
+- When an image is tapped, a dialog or overlay pops up to display the image in a larger view.
+2. Swipe to Switch Between Images:
+- Users can swipe left or right to navigate through multiple images in the popup.
+3. Image Rotation:
+- Users can rotate the image by a specific angle (e.g., 90 degrees) using a rotation button or gesture.
+4. Image Zoom/Pinch-to-Zoom:
+- Users can zoom in and out of the image using pinch gestures.
 
-This project is a starting point for a Flutter application.
+## Steps use 
+Add dependency in pubspec.yaml file as
+> image_box: 0.1.0
 
-A few resources to get you started if this is your first Flutter project:
+## Forward Geocoding 
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
