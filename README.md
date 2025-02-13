@@ -21,11 +21,19 @@ Add dependency in pubspec.yaml file as
 # bgColor (Color) ： background color
 # imageIndex (int) ：Current image index value
 # imageList (List<String>) : List of online image addresses
-ImageBox(
-    bgColor: Colors.white,
-    imageIndex: e.key,
-    imageList: photoList,
-    )
+showDialog(
+    context: context,
+    builder: (context) {
+    const size = MediaQuery.of(context).size;
+    return SizedBox(
+        width: size.width - 20,
+        child: ImageBox(
+        bgColor: Colors.white,
+        imageIndex: e.key,
+        imageList: photoList,
+        ),
+    );
+    })
 ```
 ## Preview
 ![pre.jpg](https://raw.githubusercontent.com/smartwange/image_box/refs/heads/main/example/assets/images/pre.jpg)
