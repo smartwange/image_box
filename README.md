@@ -1,4 +1,4 @@
-# image_box
+# images_box
 
 Flutter Image Popup with Multiple Features
 
@@ -14,7 +14,7 @@ Flutter Image Popup with Multiple Features
 
 ## Steps use 
 Add dependency in pubspec.yaml file as
-> image_box: 0.1.0
+> images_box: 0.1.0
 
 ## Forward Geocoding 
 

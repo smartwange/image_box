@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:image_box/image_box.dart';
+import 'package:images_box/image_box.dart';
 
 void main() {
   runApp(const MyApp());
