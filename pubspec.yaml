@@ -2,7 +2,7 @@ name: images_box
 description: "Flutter Image Popup with Multiple Features"
 homepage: https://github.com/smartwange/image_box
 # publish_to: 'none' # Remove this line if you wish to publish to pub.dev
-version: 0.1.0
+version: 0.2.0
 
 environment:
   sdk: ^3.6.0
