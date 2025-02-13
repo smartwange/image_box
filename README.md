@@ -28,6 +28,6 @@ ImageBox(
     )
 ```
 ## Preview
-![pre.jpg](https://raw.githubusercontent.com/smartwange/image_box/refs/heads/main/example/assets/images/female_active.png)
+![pre.jpg](https://raw.githubusercontent.com/smartwange/image_box/refs/heads/main/example/assets/images/pre.jpg)
 
 
