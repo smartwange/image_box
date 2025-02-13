@@ -84,6 +84,9 @@ class ImageBoxState extends State<ImageBox> {
                               }
                           },
                       style: ButtonStyle(
+                          mouseCursor: WidgetStatePropertyAll(index != 0
+                              ? SystemMouseCursors.click
+                              : SystemMouseCursors.forbidden),
                           shadowColor:
                               const WidgetStatePropertyAll(Colors.grey),
                           elevation: WidgetStatePropertyAll(20),
@@ -111,6 +114,10 @@ class ImageBoxState extends State<ImageBox> {
                               }
                           },
                       style: ButtonStyle(
+                          mouseCursor: WidgetStatePropertyAll(
+                              index != widget.imageList.length - 1
+                                  ? SystemMouseCursors.click
+                                  : SystemMouseCursors.forbidden),
                           shadowColor:
                               const WidgetStatePropertyAll(Colors.grey),
                           elevation: WidgetStatePropertyAll(20),

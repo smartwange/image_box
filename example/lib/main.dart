@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:image_box/image_box.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,41 +30,64 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
+    List<String> photoList = [
+      'https://raw.githubusercontent.com/smartwange/image_box/refs/heads/main/example/assets/images/female_active.png',
+      'https://raw.githubusercontent.com/smartwange/image_box/refs/heads/main/example/assets/images/male_active.png'
+    ];
+
+    final size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-            SizedBox()
-          ],
+        appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          title: Text(widget.title),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
-    );
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Wrap(
+                  spacing: 8,
+                  children: photoList
+                      .asMap()
+                      .entries
+                      .map((e) {
+                        print(e.key);
+                        return GestureDetector(
+                          onTap: () => showDialog(
+                              context: context,
+                              builder: (context) {
+                                return SizedBox(
+                                  width: size.width - 20,
+                                  child: ImageBox(
+                                    bgColor: Colors.white,
+                                    imageIndex: e.key,
+                                    imageList: photoList,
+                                  ),
+                                );
+                              }),
+                          child: Stack(
+                            children: [
+                              Image.network(e.value,
+                                  height: 90,
+                                  width: (size.width - 57) / 3,
+                                  fit: BoxFit.fill),
+                              Positioned(
+                                  right: 5,
+                                  bottom: 5,
+                                  child: Image.asset(
+                                      'assets/images/enlarge.png',
+                                      width: 20,
+                                      fit: BoxFit.fitWidth))
+                            ],
+                          ),
+                        );
+                      })
+                      .toList()
+                      .cast<Widget>())
+            ],
+          ),
+        ));
   }
 }
